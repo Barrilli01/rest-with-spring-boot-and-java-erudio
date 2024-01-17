@@ -1,5 +1,6 @@
 package org.gabrielbarrilli.restwithspringbootandjavaerudio;
 
+import org.gabrielbarrilli.restwithspringbootandjavaerudio.exceptions.UnsupportedMathOperationException;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.concurrent.atomic.AtomicLong;
@@ -14,7 +15,7 @@ public class SumController {
                       @PathVariable(value = "numberTwo") String numberTwo)
             throws Exception {
         if (!isNumeric(numberOne) || !isNumeric(numberTwo)) {
-            throw new Exception();
+            throw new UnsupportedMathOperationException("Please set a numeric value!");
         }
         return convertToDouble(numberOne) + convertToDouble(numberTwo);
     }
