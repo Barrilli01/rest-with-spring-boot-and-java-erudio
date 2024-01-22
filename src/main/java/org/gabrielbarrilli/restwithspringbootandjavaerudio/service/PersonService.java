@@ -27,7 +27,6 @@ public class PersonService {
     public Person findById(Long id) {
         logger.info("Achando uma pessoa!");
 
-
         return personRepository.findById(id).
                 orElseThrow(() -> new EntityNotFoundException("Não há pesssoa com esse id!"));
     }
