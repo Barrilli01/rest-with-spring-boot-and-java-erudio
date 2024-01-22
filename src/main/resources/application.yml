@@ -1,1 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/rest_with_spring_boot_erudio?useTimezone=true&serverTimezone=UTC
 
+    username: postgres
+
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        show_sql: false

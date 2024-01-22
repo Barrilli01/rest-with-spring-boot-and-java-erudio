@@ -1,17 +1,32 @@
 package org.gabrielbarrilli.restwithspringbootandjavaerudio.model;
 
+import jakarta.persistence.*;
+
 import java.io.Serial;
 import java.io.Serializable;
 
+@Entity
+@Table(name = "p01_person")
 public class Person implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 1L;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "p01_codigo_pessoa")
     private Long id;
+
+    @Column(name = "p01_first_name", nullable = false)
     private String firstName;
+
+    @Column(name = "p01_last_name", nullable = false)
     private String lastName;
+
+    @Column(name = "p01_address")
     private String address;
+
+    @Column(name = "p01_gender")
     private String gender;
 
     public Long getId() {
