@@ -1,9 +1,9 @@
 package org.gabrielbarrilli.restwithspringbootandjavaerudio.unittests.mapper;
 
+import org.gabrielbarrilli.restwithspringbootandjavaerudio.data.vo.v1.PersonVO;
 import org.gabrielbarrilli.restwithspringbootandjavaerudio.mapper.DozerMapper;
 import org.gabrielbarrilli.restwithspringbootandjavaerudio.model.Person;
 import org.gabrielbarrilli.restwithspringbootandjavaerudio.unittests.mapper.mocks.MockPerson;
-import org.gabrielbarrilli.restwithspringbootandjavaerudio.vo.v1.PersonVO;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.*;
 

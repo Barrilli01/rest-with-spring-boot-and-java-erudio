@@ -1,12 +1,9 @@
-package org.gabrielbarrilli.restwithspringbootandjavaerudio.vo.v1;
-
+package org.gabrielbarrilli.restwithspringbootandjavaerudio.data.vo.v2;
 
 import java.io.Serial;
 import java.io.Serializable;
 
-
-public class PersonVO implements Serializable {
-
+public class PersonVOV2 implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
 
@@ -56,13 +53,13 @@ public class PersonVO implements Serializable {
         this.gender = gender;
     }
 
-    public PersonVO(String firstName, String lastName, String address, String gender) {
+    public PersonVOV2(String firstName, String lastName, String address, String gender) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
         this.gender = gender;
     }
 
-    public PersonVO() {
+    public PersonVOV2() {
     }
 }

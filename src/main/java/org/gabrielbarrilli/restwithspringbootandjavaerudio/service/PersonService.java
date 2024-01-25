@@ -5,7 +5,7 @@ import org.gabrielbarrilli.restwithspringbootandjavaerudio.exceptions.ResourceNo
 import org.gabrielbarrilli.restwithspringbootandjavaerudio.mapper.DozerMapper;
 import org.gabrielbarrilli.restwithspringbootandjavaerudio.model.Person;
 import org.gabrielbarrilli.restwithspringbootandjavaerudio.repository.PersonRepository;
-import org.gabrielbarrilli.restwithspringbootandjavaerudio.vo.v1.PersonVO;
+import org.gabrielbarrilli.restwithspringbootandjavaerudio.data.vo.v1.PersonVO;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
