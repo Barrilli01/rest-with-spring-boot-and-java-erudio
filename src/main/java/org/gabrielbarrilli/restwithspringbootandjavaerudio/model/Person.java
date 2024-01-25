@@ -9,6 +9,7 @@ import java.io.Serializable;
 @Table(name = "p01_person")
 public class Person implements Serializable {
 
+    // testando
     @Serial
     private static final long serialVersionUID = 1L;
 
