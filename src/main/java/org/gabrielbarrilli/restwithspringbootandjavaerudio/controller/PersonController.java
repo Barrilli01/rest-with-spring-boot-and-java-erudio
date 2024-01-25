@@ -1,7 +1,7 @@
 package org.gabrielbarrilli.restwithspringbootandjavaerudio.controller;
 
-import org.gabrielbarrilli.restwithspringbootandjavaerudio.model.Person;
 import org.gabrielbarrilli.restwithspringbootandjavaerudio.service.PersonService;
+import org.gabrielbarrilli.restwithspringbootandjavaerudio.vo.v1.PersonVO;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,23 +18,23 @@ public class PersonController {
     }
 
     @RequestMapping(method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Person> findAll() {
+    public List<PersonVO> findAll() {
         return personService.findAll();
     }
 
     @GetMapping(value = "/{id}")
-    public Person findById(@PathVariable Long id) {
+    public PersonVO findById(@PathVariable Long id) {
         return personService.findById(id);
     }
 
     @PostMapping("/criarPessoa")
-    public Person create(@RequestBody Person person) {
-        return personService.create(person);
+    public PersonVO create(@RequestBody PersonVO personVO) {
+        return personService.create(personVO);
     }
 
     @PutMapping("/atualizarPessoa")
-    public Person update(@RequestBody Person person) {
-        return personService.update(person);
+    public PersonVO update(@RequestBody PersonVO personVO) {
+        return personService.update(personVO);
     }
 
     @DeleteMapping(value = "/{id}")
