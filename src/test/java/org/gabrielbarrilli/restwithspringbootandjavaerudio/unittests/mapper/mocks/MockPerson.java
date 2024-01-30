@@ -1,7 +1,7 @@
 package org.gabrielbarrilli.restwithspringbootandjavaerudio.unittests.mapper.mocks;
 
 import org.gabrielbarrilli.restwithspringbootandjavaerudio.model.Person;
-import org.gabrielbarrilli.restwithspringbootandjavaerudio.data.vo.v1.PersonVO;
+import org.gabrielbarrilli.restwithspringbootandjavaerudio.data.vo.PersonVO;
 
 import java.util.ArrayList;
 import java.util.List;
