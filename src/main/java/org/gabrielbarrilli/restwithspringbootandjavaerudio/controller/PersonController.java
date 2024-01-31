@@ -1,7 +1,7 @@
 package org.gabrielbarrilli.restwithspringbootandjavaerudio.controller;
 
 import org.gabrielbarrilli.restwithspringbootandjavaerudio.service.PersonService;
-import org.gabrielbarrilli.restwithspringbootandjavaerudio.data.vo.v1.PersonVO;
+import org.gabrielbarrilli.restwithspringbootandjavaerudio.data.vo.PersonVO;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 

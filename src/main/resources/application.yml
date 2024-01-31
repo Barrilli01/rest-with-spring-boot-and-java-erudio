@@ -1,13 +1,13 @@
 spring:
-  datasource:
+  flyway:
     url: jdbc:postgresql://localhost:5432/rest_with_spring_boot_erudio?useTimezone=true&serverTimezone=UTC
 
-    username: postgres
+    user: postgres
 
     password: root
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
 
     show_sql: false
     open-in-view: false
