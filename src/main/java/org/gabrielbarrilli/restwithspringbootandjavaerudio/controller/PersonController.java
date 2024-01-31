@@ -1,5 +1,6 @@
 package org.gabrielbarrilli.restwithspringbootandjavaerudio.controller;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.gabrielbarrilli.restwithspringbootandjavaerudio.service.PersonService;
 import org.gabrielbarrilli.restwithspringbootandjavaerudio.data.vo.PersonVO;
 import org.springframework.http.MediaType;
@@ -8,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/person")
+@RequestMapping("/persons")
 public class PersonController {
 
     private final PersonService personService;
@@ -17,17 +18,17 @@ public class PersonController {
         this.personService = personService;
     }
 
-    @RequestMapping(method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public List<PersonVO> findAll() {
         return personService.findAll();
     }
 
-    @GetMapping(value = "/{id}")
+    @GetMapping(value = "/{id}", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public PersonVO findById(@PathVariable Long id) {
         return personService.findById(id);
     }
 
-    @PostMapping("/criarPessoa")
+    @PostMapping("/criarPessoa" /*, produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE}*/)
     public PersonVO create(@RequestBody PersonVO personVO) {
         return personService.create(personVO);
     }

@@ -4,7 +4,6 @@ package org.gabrielbarrilli.restwithspringbootandjavaerudio.data.vo;
 import java.io.Serial;
 import java.io.Serializable;
 
-
 public class PersonVO implements Serializable {
 
     @Serial
