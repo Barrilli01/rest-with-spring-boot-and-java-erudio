@@ -2,10 +2,15 @@ package org.gabrielbarrilli.restwithspringbootandjavaerudio.mapper;
 
 import com.github.dozermapper.core.DozerBeanMapperBuilder;
 import com.github.dozermapper.core.Mapper;
+import org.gabrielbarrilli.restwithspringbootandjavaerudio.data.vo.PersonVO;
+import org.gabrielbarrilli.restwithspringbootandjavaerudio.model.Person;
+import org.mapstruct.Mapping;
+import org.mapstruct.Mappings;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@org.mapstruct.Mapper
 public class DozerMapper {
 
     private static final Mapper mapper = DozerBeanMapperBuilder.buildDefault();

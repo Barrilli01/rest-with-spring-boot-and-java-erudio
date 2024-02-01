@@ -1,5 +1,7 @@
 package org.gabrielbarrilli.restwithspringbootandjavaerudio.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.github.dozermapper.core.Mapping;
 import jakarta.persistence.*;
 
 import java.io.Serial;
@@ -9,7 +11,6 @@ import java.io.Serializable;
 @Table(name = "p01_person")
 public class Person implements Serializable {
 
-    // testando
     @Serial
     private static final long serialVersionUID = 1L;
 

@@ -6,11 +6,16 @@ import org.gabrielbarrilli.restwithspringbootandjavaerudio.model.Person;
 import org.gabrielbarrilli.restwithspringbootandjavaerudio.unittests.mapper.mocks.MockPerson;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.*;
+import org.mapstruct.Mapper;
+import org.mapstruct.MapperConfig;
+import org.mapstruct.Mapping;
+import org.mapstruct.Mappings;
 
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@Mapper
 public class DozerConverterTest {
     
     MockPerson inputObject;
@@ -21,6 +26,9 @@ public class DozerConverterTest {
     }
 
     @Test
+//    @Mappings(
+//            @Mapping(source = "id", target = "key")
+//    )
     public void parseEntityToVOTest() {
         Person output = DozerMapper.parseObject(inputObject.mockEntity(), Person.class);
         assertEquals(Long.valueOf(0L), output.getId());
@@ -59,6 +67,9 @@ public class DozerConverterTest {
     }
 
     @Test
+//    @Mappings(
+//            @Mapping(source = "key", target = "id")
+//    )
     public void parseVOToEntityTest() {
         PersonVO output = DozerMapper.parseObject(inputObject.mockVO(), PersonVO.class);
         assertEquals(Long.valueOf(0L), output.getId());
